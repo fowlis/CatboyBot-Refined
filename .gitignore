@@ -7,3 +7,4 @@ catboybotstartup.bat
 package.json
 package-lock.json
 .gitattributes
+.eslintrc.js
