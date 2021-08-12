@@ -34,7 +34,7 @@ Who knows, I might use Github for more important things in the future! <br />
 |createinvite|Creates a one-use invite for the server the command is used in!|`c-createinvite`|5s|
 |reload|Reloads a provided command, so the bot doesn't need to be restarted to update a command's code!|`c-reload <command>`|5s|
 |setstatus|Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)!|`c-setstatus`, `c-setstatus <new status>`|5s|
-|botnick|Changes the bot's name to the text you provide, or resets it if you provide no text!|`c-botnick`, `c-botnick <new name>`|5s|
+|botnick|Changes the bot's nickname to the text you provide, or resets it if you provide no text!|`c-botnick`, `c-botnick <new name>`|5s|
 
 ### Need to contact me?
 **Email:** `fowlis@protonmail.com` <br />

@@ -7,7 +7,7 @@ const commandToDescription = {
     */
     avatar: "**Description:** Provides you with your or someone else's avatar!  \n\n **Aliases:** av, icon, pfp \n\n **Usage:** `c-avatar`, `c-avatar <user>`  \n\n  **Permissions:** None \n\n **Cooldown:** 5s",
     botnick:
-        "**Description:** Changes the bot's name to the text you provide, or resets it if you provide no text! \n\n **Usage:** `c-botnick`, `c-botnick <new name>` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s",
+        "**Description:** Changes the bot's nickname to the text you provide, or resets it if you provide no text! \n\n **Usage:** `c-botnick`, `c-botnick <new name>` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s",
     bunny: '**Description:** Provides you with a cute bunny picture! \n\n **Aliases:** bun, bunno \n\n  **Usage:** `c-bunny`  \n\n  **Permissions:** None \n\n **Cooldown:** 5s',
     cat: '**Description:** Provides you with a cute kitty picture! \n\n **Aliases:** kitty, catto \n\n  **Usage:** `c-cat`  \n\n  **Permissions:** None \n\n **Cooldown:** 5s',
     help: '**Description:** Introduces you to the bot and shows you the commands! \n\n **Usage:** `c-help` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
