@@ -27,7 +27,7 @@ This is my personal Discord bot. Probably won't be adding it to any other server
 
 ### Bot Owner-only Commands:
 | Name | Description | Usage | Cooldown |
-|:---------|:---------|:---------|:---------|:---------|
+|:---------|:---------|:---------|:---------|
 |createinvite|Creates a one-use invite for the server the command is used in!|`c-createinvite`|5s|
 |reload|Reloads a provided command, so the bot doesn't need to be restarted to update a command's code!|`c-reload <command>`|5s|
 |setstatus|Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)!|`c-setstatus`, `c-setstatus <new status>`|5s|
