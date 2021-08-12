@@ -8,7 +8,7 @@ module.exports = {
         if (message.author.id != ownerID) {
             message.reply('you must be the bot owner to run this command, sorry!')
         } else {
-            message.reply(`Here is my GitHub repo! https://github.com/fowlis/CatboyBot-Refined`)
+            message.author.send(`Here is my GitHub repo! https://github.com/fowlis/CatboyBot-Refined`)
         }
     },
 }
