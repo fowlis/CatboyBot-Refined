@@ -32,3 +32,6 @@ This is my personal Discord bot. Probably won't be adding it to any other server
 |reload|Reloads a provided command, so the bot doesn't need to be restarted to update a command's code!|`c-reload <command>`|5s|
 |setstatus|Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)!|`c-setstatus`, `c-setstatus <new status>`|5s|
 |botnick|Changes the bot's name to the text you provide, or resets it if you provide no text!|`c-botnick`, `c-botnick <new name>`|5s|
+
+### Want to get in touch?
+**Email:** fowlis@protonmail.com
