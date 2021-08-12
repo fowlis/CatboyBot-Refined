@@ -10,7 +10,7 @@ This is my personal Discord bot. Probably won't be adding it to any other server
 |avatar|Provides you with your or someone else's avatar!|`c-avatar`, `c-avatar <user>`|None|5s|
 |help|Introduces you to the bot and shows you the commands!|`c-help`|None|5s|
 |info|Provides information on other commands!|`c-info <command name>`|None|5s|
-|ping|Shows the bot's current response time!|`c-ping`|None|5s|
+|ping|Shows the bot's current response time!|`c-ping`|None|15s|
 |update|Provides you with the most recent update to the bot!|`c-update`|None|5s|
 |uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|None|5s|
 |userid|Shows you your Discord user ID!|`c-userid`|None|5s|
