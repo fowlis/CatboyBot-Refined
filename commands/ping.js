@@ -1,7 +1,7 @@
 module.exports = {
     name: 'ping',
     description: 'this is a ping command!',
-    cooldown: 5,
+    cooldown: 15,
     execute: async (message) => {
         var pingMsg = await message.channel.send({
             embed: {
