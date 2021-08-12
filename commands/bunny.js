@@ -9,7 +9,7 @@ module.exports = {
     description: 'this is a bunny command!',
     cooldown: 5,
     execute(message) {
-        const imageNumber = randomBetween(1, 56)
+        const imageNumber = randomBetween(1, 58)
 
         const attachment = new MessageAttachment('./media/bunny-pics/' + imageNumber + '.jpg', 'bunny.jpg')
         const secretAttachment1 = new MessageAttachment('./media/bunny-pics/skaterboi.jpg', 'secret1.jpg')

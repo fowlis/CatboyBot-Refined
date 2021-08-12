@@ -9,7 +9,7 @@ module.exports = {
     description: 'this is a cat command!',
     cooldown: 5,
     execute: async (message) => {
-        const imageNumber = randomBetween(1, 48)
+        const imageNumber = randomBetween(1, 50)
 
         const attachment = new MessageAttachment('./media/cat-pics/' + imageNumber + '.jpg', 'kitty.jpg')
         const secretAttachment = new MessageAttachment('./media/cat-pics/secret.jpg', 'secret.jpg')
