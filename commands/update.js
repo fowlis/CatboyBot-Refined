@@ -7,7 +7,7 @@ module.exports = {
     cooldown: 5,
     execute(message) {
         const embed = getEmbed()
-            .setTitle('**Update as of** <t:1628734500:R>')
+            .setTitle('**Update as of** <t:1628734500:D>')
             .addFields({
                 name: '**__Changelog:__**',
                 value: '• Removed commands: `cum`, `eject`, `engineergaming`. \n • Some command info pages have been updated, nothing major. \n • `ping` command cooldown is now 15s, to prevent spam',
