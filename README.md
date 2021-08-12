@@ -7,26 +7,26 @@ Who knows, I might use Github for more important things in the future! <br />
 ## Command List
 
 ### Basic Commands:
-| Name | Description | Usage | Permissions | Cooldown |
+| Name | Description | Usage | Cooldown |
 |:---------|:---------|:---------|:---------|:---------|
-|avatar|Provides you with your or someone else's avatar!|`c-avatar`, `c-avatar <user>`|None|5s|
-|help|Introduces you to the bot and shows you the commands!|`c-help`|None|5s|
-|info|Provides information on other commands!|`c-info <command name>`|None|5s|
-|ping|Shows the bot's current response time!|`c-ping`|None|15s|
-|unix|Gives you the current unix time!|`c-unix`|None|5s|
-|update|Provides you with the most recent update to the bot!|`c-update`|None|5s|
-|uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|None|5s|
-|userid|Shows you your own, or someone else's Discord user ID!|`c-userid`|None|5s|
+|avatar|Provides you with your or someone else's avatar!|`c-avatar`, `c-avatar <user>`|5s|
+|help|Introduces you to the bot and shows you the commands!|`c-help`|5s|
+|info|Provides information on other commands!|`c-info <command name>`|5s|
+|ping|Shows the bot's current response time!|`c-ping`|15s|
+|unix|Gives you the current unix time!|`c-unix`|5s|
+|update|Provides you with the most recent update to the bot!|`c-update`|5s|
+|uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|5s|
+|userid|Shows you your own, or someone else's Discord user ID!|`c-userid`|5s|
 
 ### Fun Commands:
-| Name | Description | Usage | Permissions | Cooldown |
+| Name | Description | Usage | Cooldown |
 |:---------|:---------|:---------|:---------|:---------|
-|bunny|Provides you with a cute bunny picture!|`c-bunny`|None|5s|
-|cat|Provides you with a cute cat picture!|`c-cat`|None|5s|
-|hi|The bot will greet you!|`c-hi`|None|5s|
-|hug|Give yourself, or someone else, a hug!|`c-hug`, `c-hug <user>`|None|5s|
-|randomcolour|Generate a random colour, then provide you with the RGB and HEX for the colour and a link to a Google search for the colour!|`c-randomcolour`|None|10s|
-|serotonin|Provides you or another user with links to Reddit and Twitter pages to give you serotonin!|`c-serotonin`, `c-serotonin <user>`|None|5s|
+|bunny|Provides you with a cute bunny picture!|`c-bunny`|5s|
+|cat|Provides you with a cute cat picture!|`c-cat`|5s|
+|hi|The bot will greet you!|`c-hi`|5s|
+|hug|Give yourself, or someone else, a hug!|`c-hug`, `c-hug <user>`|5s|
+|randomcolour|Generate a random colour, then provide you with the RGB and HEX for the colour and a link to a Google search for the colour!|`c-randomcolour`|10s|
+|serotonin|Provides you or another user with links to Reddit and Twitter pages to give you serotonin!|`c-serotonin`, `c-serotonin <user>`|5s|
 
 ### Bot Owner-only Commands:
 | Name | Description | Usage | Cooldown |
