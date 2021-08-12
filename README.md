@@ -15,7 +15,7 @@ This is my personal Discord bot. Probably won't be adding it to any other server
 |uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|None|5s|
 |userid|Shows you your Discord user ID!|`c-userid`|None|5s|
 
-### Fun Commands
+### Fun Commands:
 | Name | Description | Usage | Permissions | Cooldown |
 |:---------|:---------|:---------|:---------|:---------|
 |bunny|Provides you with a cute bunny picture!|`c-bunny`|None|5s|
@@ -25,9 +25,9 @@ This is my personal Discord bot. Probably won't be adding it to any other server
 |randomcolour|Generate a random colour, then provide you with the RGB and HEX for the colour and a link to a Google search for the colour!|`c-randomcolour`|None|10s|
 |serotonin|Provides you or another user with links to Reddit and Twitter pages to give you serotonin!|`c-serotonin`, `c-serotonin <user>`|None|5s|
 
-### Bot Owner-only Commands
+### Bot Owner-only Commands:
 | Name | Description | Usage | Cooldown |
-|:---------|:---------|:---------|:---------|:---------|
+|:---------|:---------|:---------|:---------|
 |createinvite|Creates a one-use invite for the server the command is used in!|`c-createinvite`|5s|
 |reload|Reloads a provided command, so the bot doesn't need to be restarted to update a command's code!|`c-reload <command>`|5s|
 |setstatus|Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)!|`c-setstatus`, `c-setstatus <new status>`|5s|
