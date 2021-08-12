@@ -20,7 +20,7 @@ const commandToDescription = {
     reload: "**Description:** Reloads a provided command, so the bot doesn't need to be restarted to update a command's code! \n\n **Aliases:** rel \n\n **Usage:** `c-reload <command>` \n\n **Permissions:** Bot Owner Only \n\n **Cooldown:** 5s",
     serotonin:
         '**Description:** Provides you or another user with links to Reddit and Twitter pages to give you serotonin! \n\n **Usage:** `c-serotonin`, `c-serotonin <user>`\n\n **Permissions:** None \n\n **Cooldown:** 5s',
-    userid: '**Description:** Shows you your Discord user ID! \n\n **Aliases:** id, uid \n\n **Usage:** `c-userid` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
+    userid: '**Description:** Shows you your own, or someone else\'s Discord user ID! \n\n **Aliases:** id, uid \n\n **Usage:** `c-userid`, `c-userid <user>` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
     update: '**Description:** Provides you with the most recent update to the bot! \n\n **Aliases:** upd \n\n **Usage:** `c-update`\n\n **Permissions:** None \n\n **Cooldown:** 5s',
     uptime: '**Description:** Shows you how long the bot has been running since last restart! \n\n **Usage:** `c-uptime` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
     setstatus:

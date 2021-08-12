@@ -6,8 +6,14 @@ module.exports = {
     description: 'this is a user ID command!',
     cooldown: 5,
     execute(message) {
-        const embed = getEmbed().setTitle(`${message.author.username}, your user ID is ${message.author.id}`)
+        let success = false
+        const user = message.mentions.users.first()
 
+        const embed = getEmbed()
+            .setTitle(`${user?.username ?? message.author.username}${user ? `'s` : ', your'} user ID is \`${user?.id ?? message.author.id}\``)
         message.channel.send(embed)
+
+        success == true
+        return success
     },
 }

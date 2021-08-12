@@ -16,7 +16,7 @@ Who knows, I might use Github for more important things in the future! <br />
 |unix|Gives you the current unix time!|`c-unix`|None|5s|
 |update|Provides you with the most recent update to the bot!|`c-update`|None|5s|
 |uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|None|5s|
-|userid|Shows you your Discord user ID!|`c-userid`|None|5s|
+|userid|Shows you your own, or someone else's Discord user ID!|`c-userid`|None|5s|
 
 ### Fun Commands:
 | Name | Description | Usage | Permissions | Cooldown |
