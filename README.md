@@ -38,4 +38,4 @@ Who knows, I might use Github for more important things in the future! <br />
 
 ### Need to contact me?
 **Email:** `fowlis@protonmail.com` <br />
-**Any issues?:** <a href="https://github.com/fowlis/CatboyBot-Refined/issues" target="_blank">Post them here</a> (not that you'll have any (probably))
+**Any issues?:** <a href="https://github.com/fowlis/CatboyBot-Refined/issues" target="_blank">Post them here</a> (not that you'll have any (probably)) <br />
