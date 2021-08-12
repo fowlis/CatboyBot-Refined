@@ -7,10 +7,10 @@ module.exports = {
     cooldown: 5,
     execute(message) {
         const embed = getEmbed()
-            .setTitle('Update as of Monday, 24th May 2021')
+            .setTitle('**Update as of** <t:1628734500:R>')
             .addFields({
-                name: '**__Update Info:__**',
-                value: '• Added an `uptime` command where you can see how long the bot has been running! \n • Updated the `c-help` embed slightly, (hopefully) better formatting! \n • Changed up the date format on the `c-update` embed',
+                name: '**__Changelog:__**',
+                value: '• Removed commands: `cum`, `eject`, `engineergaming`. \n • Some command info pages have been updated, nothing major. \n • `ping` command cooldown is now 15s, to prevent spam',
                 inline: true,
             })
             .addField('__Notes:__', 'As always, you can get more info on a command using `c-info <command name>`!')
@@ -19,11 +19,13 @@ module.exports = {
     },
 }
 
-/* CLEAR CODE FOR UPDATING*/
 
-/*
+/* SKELETON CODE FOR UPDATING (mostly useless)
 
 .setTitle("Update as of date")
-.addFields({name: "**__Update Info:__**",value:"",inline:true})
+.addFields({
+    name: "**Changelog:**",
+    value:"",
+    inline:true})
 
 */
