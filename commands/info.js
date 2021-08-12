@@ -17,7 +17,7 @@ const commandToDescription = {
     ping: "**Description:** Shows the bot's current response time! \n\n **Usage:** `c-ping` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
     randomcolour:
         '**Description:** Generate a random colour, then provide you the RGB and HEX code for the generated colour and a link to a Google search for the colour! \n\n **Aliases:** randomcolor, rcolour, rcolor  \n\n **Usage:** `c-randomcolour` \n\n **Permissions:** None \n\n **Cooldown:** 10s',
-    reload: "**Description:** Reloads a provided command, so the bot doesn't need to be restarted to update a command's code! \n\n **Aliases:** rel \n\n **Usage:** `c-reload <command>` \n\n **Permissions:** Bot Owner Only",
+    reload: "**Description:** Reloads a provided command, so the bot doesn't need to be restarted to update a command's code! \n\n **Aliases:** rel \n\n **Usage:** `c-reload <command>` \n\n **Permissions:** Bot Owner Only \n\n **Cooldown:** 5s",
     serotonin:
         '**Description:** Provides you or another user with links to Reddit and Twitter pages to give you serotonin! \n\n **Usage:** `c-serotonin`, `c-serotonin <user>`\n\n **Permissions:** None \n\n **Cooldown:** 5s',
     userid: '**Description:** Shows you your Discord user ID! \n\n **Aliases:** id, uid \n\n **Usage:** `c-userid` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
