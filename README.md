@@ -11,6 +11,7 @@ This is my personal Discord bot. Probably won't be adding it to any other server
 |help|Introduces you to the bot and shows you the commands!|`c-help`|None|5s|
 |info|Provides information on other commands!|`c-info <command name>`|None|5s|
 |ping|Shows the bot's current response time!|`c-ping`|None|15s|
+|unix|Gives you the current unix time!|`c-unix`|None|5s|
 |update|Provides you with the most recent update to the bot!|`c-update`|None|5s|
 |uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|None|5s|
 |userid|Shows you your Discord user ID!|`c-userid`|None|5s|

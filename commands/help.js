@@ -10,7 +10,7 @@ module.exports = {
             .setDescription("Here you will find the bot's commands! \n You can optionally get this message sent to your DMs by using `c-help dm`!")
             .addFields({
                 name: '**__Basic Commands__**',
-                value: '`avatar` \n `help` \n `info` \n `ping` \n `update` \n `uptime` \n `userid`',
+                value: '`avatar` \n `help` \n `info` \n `ping` \n `unix` \n `update` \n `uptime` \n `userid`',
                 inline: true,
             })
             .addFields({
