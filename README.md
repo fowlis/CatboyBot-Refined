@@ -1,6 +1,6 @@
-# CatboyBot - created by <a href="https://github.com/fowlis" target="_blank">fowlis</a> <br />
+# CatboyBot - created by <a href="https://github.com/fowlis" target="_blank">fowlis</a>
 
-This is my personal Discord bot. Probably won't be adding it to any other servers than my own.
+This is my personal Discord bot. Probably won't be adding it to any other servers than my own. <br />
 I will admit - there's not much point in putting it on Github, but it helps me learn. Who knows, I might use Github for more important things in the future!
 
 ## Command List
