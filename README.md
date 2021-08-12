@@ -8,7 +8,7 @@ Who knows, I might use Github for more important things in the future! <br />
 
 ### Basic Commands:
 | Name | Description | Usage | Cooldown |
-|:---------|:---------|:---------|:---------|:---------|
+|:---------|:---------|:---------|:---------|
 |avatar|Provides you with your or someone else's avatar!|`c-avatar`, `c-avatar <user>`|5s|
 |help|Introduces you to the bot and shows you the commands!|`c-help`|5s|
 |info|Provides information on other commands!|`c-info <command name>`|5s|
@@ -20,7 +20,7 @@ Who knows, I might use Github for more important things in the future! <br />
 
 ### Fun Commands:
 | Name | Description | Usage | Cooldown |
-|:---------|:---------|:---------|:---------|:---------|
+|:---------|:---------|:---------|:---------|
 |bunny|Provides you with a cute bunny picture!|`c-bunny`|5s|
 |cat|Provides you with a cute cat picture!|`c-cat`|5s|
 |hi|The bot will greet you!|`c-hi`|5s|
