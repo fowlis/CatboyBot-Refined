@@ -37,4 +37,5 @@ Who knows, I might use Github for more important things in the future! <br />
 |botnick|Changes the bot's name to the text you provide, or resets it if you provide no text!|`c-botnick`, `c-botnick <new name>`|5s|
 
 ### Want to get in touch?
-**Email:** fowlis@protonmail.com
+**Email:** `fowlis@protonmail.com`
+**Any issues?:** <a href="https://github.com/fowlis/CatboyBot-Refined/issues" target="_blank">Post them here</a> (not that you'll have any (probably))
