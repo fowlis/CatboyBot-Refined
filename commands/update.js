@@ -22,7 +22,7 @@ module.exports = {
 
 /* SKELETON CODE FOR UPDATING (mostly useless)
 
-.setTitle("Update as of date")
+.setTitle("Update as <t:unix:D>") <-- Use the unix command when making a new update for the current-ish time
 .addFields({
     name: "**Changelog:**",
     value:"",
