@@ -36,6 +36,6 @@ Who knows, I might use Github for more important things in the future! <br />
 |setstatus|Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)!|`c-setstatus`, `c-setstatus <new status>`|5s|
 |botnick|Changes the bot's name to the text you provide, or resets it if you provide no text!|`c-botnick`, `c-botnick <new name>`|5s|
 
-### Want to get in touch?
+### Need to contact me?
 **Email:** `fowlis@protonmail.com` <br />
 **Any issues?:** <a href="https://github.com/fowlis/CatboyBot-Refined/issues" target="_blank">Post them here</a> (not that you'll have any (probably))
