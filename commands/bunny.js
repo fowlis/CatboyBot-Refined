@@ -31,8 +31,8 @@ module.exports = {
                 .setTitle('RARE FIND!!')
                 .setColor('B3F1F2')
                 .setDescription(`Teacup Bunny found!`)
-                .attachFiles(secretAttachment1)
-                .setImage('attachment://secret1.jpg')
+                .attachFiles(secretAttachment2)
+                .setImage('attachment://secret2.jpg')
             message.channel.send(embed)
         } else {
             const embed = getEmbed()
