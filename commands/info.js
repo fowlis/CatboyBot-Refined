@@ -39,14 +39,16 @@ module.exports = {
         if (description == null) {
             if (Math.random() < 0.25) {
                 return message.reply(
-                    `the \`{args[0]}\` command doesn't have an info page, or isn't a valid command! \n *Hint: use \`c-help\` to see the list of commands!*`
+                    `that command doesn't have an info page, or isn't a valid command! \n *Hint: use \`c-help\` to see the list of commands!*`
                 )
             } else {
-                return message.reply(`the \`{args[0]}\` command doesn't have an info page, or isn't a valid command!`)
+                return message.reply(
+                    `that command doesn't have an info page, or isn't a valid command!`
+                )
             }
         }
 
-        const embed = getEmbed().setTitle((args[0]=='weather') ? `weather :warning: WIP (command broken)` : `${args[0]}`).setDescription(description)
+        const embed = getEmbed().setTitle(`${args[0]}`).setDescription(description)
 
         return message.channel.send(embed)
     },

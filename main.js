@@ -109,7 +109,7 @@ client.on('message', (message) => {
             })
             .addFields({
                 name: 'When?',
-                value: `At ${dayjs(client.message).format('HH:mm:ss')} on ${dayjs(client.message).format('DD/MM/YYYY')} `,
+                value: `On <t:${dayjs().unix()}:D>, at <t:${dayjs().unix()}:t>`,
                 inline: false,
             })
             .addFields({
