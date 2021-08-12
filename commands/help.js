@@ -15,7 +15,7 @@ module.exports = {
             })
             .addFields({
                 name: '**__Fun Commands__**',
-                value: '`bunny` \n `cat` \n `eject` \n `hi` \n `hug` \n `randomcolour` \n `serotonin`',
+                value: '`bunny` \n `cat` \n `hi` \n `hug` \n `randomcolour` \n `serotonin`',
                 inline: true,
             })
             .addFields({
