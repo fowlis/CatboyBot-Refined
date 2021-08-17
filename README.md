@@ -13,7 +13,7 @@ Who knows, I might use Github for more important things in the future! <br />
 |help|Introduces you to the bot and shows you the commands!|`c-help`|5s|
 |info|Provides information on other commands!|`c-info <command name>`|5s|
 |ping|Shows the bot's current response time!|`c-ping`|15s|
-|unix|Gives you the current unix time!|`c-unix`|5s|
+|unix|Shows you the current unix time, and the unix time formatted in many ways!|`c-unix`|5s|
 |update|Provides you with the most recent update to the bot!|`c-update`|5s|
 |uptime|Shows you how long the bot has been running since last restart!|`c-uptime`|5s|
 |userid|Shows you your own, or someone else's Discord user ID!|`c-userid`|5s|

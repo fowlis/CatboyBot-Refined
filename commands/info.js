@@ -27,7 +27,7 @@ const commandToDescription = {
         '**Description:** Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)! \n\n **Usage:** `c-setstatus`, `c-setstatus <new status>` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s',
     createinvite: "**Description:** Creates a one-use invite for the server the command is used in! \n\n **Usage:** `c-createinvite` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s",
     roll: "**Description:** Roll a number between 1 and a number you provide! \n\n **Usage:** `c-roll <num>` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
-    unix: "**Description:** Gives you the current unix time! \n\n **Usage:** `c-unix` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
+    unix: "**Description:** Shows you the current unix time, and the unix time formatted in many ways! \n\n **Usage:** `c-unix` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
 }
 
 module.exports = {
