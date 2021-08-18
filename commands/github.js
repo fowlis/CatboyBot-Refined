@@ -4,11 +4,23 @@ module.exports = {
     description: 'yes',
     aliases: ['gh'],
     cooldown: 5,
-    execute(message) {
+    execute(message, args) {
+        const githubMsg = 'Here is my GitHub repo! <https://github.com/fowlis/CatboyBot-Refined>'
+
         if (message.author.id != ownerID) {
             message.reply('you must be the bot owner to run this command, sorry!')
+            return
+        }
+
+        if (args == 'dm') {
+            message.author.send(githubMsg)
+            return
+        } else if (!message.guild) {
+            message.channel.send(githubMsg)
+            return
         } else {
-            message.author.send(`Here is my GitHub repo! https://github.com/fowlis/CatboyBot-Refined`)
+            message.channel.send(githubMsg)
+            return
         }
     },
 }

@@ -4,7 +4,7 @@ const fs = require('fs')
 const { prefix, token, ownerID } = require('./config.json')
 const getEmbed = require('./utils/getEmbed.js')
 
-const client = new Discord.Client({ws:{ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS'] }, partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true })
+const client = new Discord.Client({ws:{ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] }, partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true })
 
 var dayjs = require('dayjs')
 
