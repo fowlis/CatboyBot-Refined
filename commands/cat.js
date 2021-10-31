@@ -9,7 +9,7 @@ module.exports = {
     description: 'this is a cat command!',
     cooldown: 5,
     execute: async (message) => {
-        const imageNumber = randomBetween(1, 51)
+        const imageNumber = randomBetween(1, 59)
 
         const attachment = new MessageAttachment('./media/cat-pics/' + imageNumber + '.jpg', 'kitty.jpg')
         const secretAttachment = new MessageAttachment('./media/cat-pics/secret.jpg', 'secret.jpg')
@@ -37,12 +37,12 @@ module.exports = {
                 .setDescription('They have a 0.1% chance of appearing! =0.0=')
                 .setImage('https://i.imgur.com/CS9sszt.gif')
             message.channel.send(embed)
-        } else if (Math.random() < 0.05) {
-            //happens at a 0.5% chance
+        } else if (Math.random() < 0.005) {
+            //happens at a 0.05% chance
             embed
                 .setTitle(`You step into a Burger Kitty!`)
                 .setColor('B3F1F2')
-                .setDescription('What would you like to order? \n 1 for Burger, 2 for Cola! \n (0.5% chance of appearing! =0.0=)')
+                .setDescription('What would you like to order? \n 1 for Burger, 2 for Cola! \n (0.05% chance of appearing! =0.0=)')
                 .attachFiles(secretAttachment2)
                 .setImage('attachment://secret2.jpg')
             message.channel.send(embed).then(sentEmbed => {
