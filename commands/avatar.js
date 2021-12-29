@@ -6,7 +6,6 @@ module.exports = {
     description: 'this is an avatar command!',
     cooldown: 5,
     execute(message) {
-        let success = false
         const user = message.mentions.users.first()
 
         const embed = getEmbed()
@@ -16,7 +15,5 @@ module.exports = {
                     message.author.displayAvatarURL({ format: 'png', size: 256, dynamic: true })
             )
         message.channel.send(embed);
-        success == true
-        return success
     },
 }

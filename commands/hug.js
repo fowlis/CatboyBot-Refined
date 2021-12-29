@@ -5,7 +5,6 @@ module.exports = {
     description: 'this is a hug command!',
     cooldown: 5,
     execute(message) {
-        let success = false
         const user = message.mentions.users.first()
 
         const embed = getEmbed()
@@ -13,7 +12,5 @@ module.exports = {
             .setImage(user ? 'https://i.imgur.com/S4JpvwO.gif' : 'https://i.imgur.com/3pJy4mM.gif', { format: 'gif' })
 
         message.channel.send(embed)
-        success == true
-        return success
     },
 }

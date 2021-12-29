@@ -5,18 +5,15 @@ module.exports = {
     description: 'this is a roll command!',
     cooldown: 5,
     execute: async (message, args) => {
-        let success = false
         const num = Number(args)
 
         if (isNaN(num) || !Number.isInteger(num)) {
             message.reply("you didn't give me a number, or you gave me a format of numbers I can't read!")
-            success == false
             return
         }
 
         if (num <= 1 || num >= 10000) {
             message.reply('you need to give me a number higher than 1 and lower than 10000 to roll! Any number between 2 and 9999 is ok!')
-            success == false
             return
         }
 
@@ -26,7 +23,5 @@ module.exports = {
             if (roll == 69) myMessage.edit(`I roll a... ` + roll + '! Nice :wink:')
             else myMessage.edit(`I roll a... ` + roll + '!')
         }, 1500)
-        success == true
-        return success
     },
 }

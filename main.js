@@ -1,12 +1,10 @@
 const Discord = require('discord.js')
 const fs = require('fs')
-
+var dayjs = require('dayjs')
 const { prefix, token, ownerID } = require('./config.json')
 const getEmbed = require('./utils/getEmbed.js')
 
 const client = new Discord.Client({ws:{ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] }, partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true })
-
-var dayjs = require('dayjs')
 
 client.commands = new Discord.Collection()
 client.cooldowns = new Discord.Collection()
@@ -22,11 +20,12 @@ for (const file of commandFiles) {
 
 // * when bot is ready, log to console and set status
 client.on('ready', () => {
-    console.log('>>> CatboyBot starting... \n>>> CatboyBot ready!')
+    console.log('>>> Warming up...')
     client.user.setPresence({
         activity: { name: 'with a ball of yarn :3 | created by slughead#9295' },
         status: 'online',
     })
+    console.log('>>> Ready to go!')
 })
 // *
 
@@ -41,7 +40,6 @@ client.on('message', (message) => {
         client.commands.get(commandName) ??
         client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName))
 // *
-
     if (!command) {
         // * if prefix is used but no command is given
         if (commandName.length <= 0) {

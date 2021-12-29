@@ -5,6 +5,7 @@ module.exports = {
     description: 'get real',
     cooldown: 5,
     execute(message) {
+        message.delete()
         const gifs = [
             'https://tenor.com/view/get-real-scott-the-woz-scott-the-woz-get-real-funny-real-gif-23170110',
             'https://tenor.com/view/get-real-gif-23169318',
