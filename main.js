@@ -1,13 +1,13 @@
-const Discord = require('discord.js')
+const {Client, Collection} = require('discord.js')
 const fs = require('fs')
 var dayjs = require('dayjs')
 const { prefix, token, ownerID } = require('./config.json')
 const getEmbed = require('./utils/getEmbed.js')
 
-const client = new Discord.Client({ws:{ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] }, partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true })
+const client = new Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] }, { partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true })
 
-client.commands = new Discord.Collection()
-client.cooldowns = new Discord.Collection()
+client.commands = new Collection()
+client.cooldowns = new Collection()
 
 // * checking all commands or something i forgot what this does
 const commandFiles = fs.readdirSync('./commands').filter((file) => file.endsWith('.js'))
@@ -60,7 +60,7 @@ client.on('message', (message) => {
     const { cooldowns } = client
 
     if (!cooldowns.has(command.name)) {
-        cooldowns.set(command.name, new Discord.Collection())
+        cooldowns.set(command.name, new Collection())
     }
 
     const now = Date.now()
