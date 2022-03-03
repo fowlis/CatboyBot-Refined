@@ -4,5 +4,5 @@ module.exports = function getEmbed() {
     return new Discord.MessageEmbed()
         .setColor('f2b5b4')
         .setTimestamp()
-        .setFooter('Thank you for using CatboyBot!', 'https://i.imgur.com/xMIQfCE.png')
+        .setFooter({text: 'Thank you for using CatboyBot!', options: 'https://i.imgur.com/xMIQfCE.png'})
 }

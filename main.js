@@ -1,10 +1,11 @@
-const {Client, Collection} = require('discord.js')
+const { Client, Collection } = require('discord.js')
 const fs = require('fs')
-var dayjs = require('dayjs')
 const { prefix, token, ownerID } = require('./config.json')
-const getEmbed = require('./utils/getEmbed.js')
 
-const client = new Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] }, { partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true })
+const client = new Client(
+    { intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] },
+    { partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true }
+)
 
 client.commands = new Collection()
 client.cooldowns = new Collection()
@@ -22,7 +23,7 @@ for (const file of commandFiles) {
 client.on('ready', () => {
     console.log('>>> Warming up...')
     client.user.setPresence({
-        activity: { name: 'with a ball of yarn :3 | created by slughead#9295' },
+        activities: [{ name: 'with a ball of yarn :3 | created by slughead#9295' }],
         status: 'online',
     })
     console.log('>>> Ready to go!')
@@ -30,7 +31,7 @@ client.on('ready', () => {
 // *
 
 // * check if message is a command
-client.on('message', (message) => {
+client.on('messageCreate', (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return
 
     const args = message.content.slice(prefix.length).trim().split(/ +/)
@@ -39,7 +40,7 @@ client.on('message', (message) => {
     const command =
         client.commands.get(commandName) ??
         client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName))
-// *
+    // *
     if (!command) {
         // * if prefix is used but no command is given
         if (commandName.length <= 0) {
@@ -48,10 +49,19 @@ client.on('message', (message) => {
         // * if prefix is used but command is unknown
         if (Math.random() < 0.25) {
             const shortCommand = commandName.slice(0, 20)
-            message.reply(`this command \`${shortCommand}${shortCommand.length < commandName.length ? '...' : ''}\` doesn't seem to exist. Please try another command! \n *Hint: use \`c-help\` to see the list of commands!*`)
+            message.reply(
+                `this command \`${shortCommand}${
+                    shortCommand.length < commandName.length ? '...' : ''
+                }\` doesn't seem to exist. Please try another command! \n *Hint: use \`c-help\` to see the list of commands!*`
+            )
         } else {
             const shortCommand = commandName.slice(0, 20)
-            message.reply(`this command \`${shortCommand}${shortCommand.length < commandName.length ? '...' : ''}\` doesn't seem to exist. Please try another command!`)}
+            message.reply(
+                `this command \`${shortCommand}${
+                    shortCommand.length < commandName.length ? '...' : ''
+                }\` doesn't seem to exist. Please try another command!`
+            )
+        }
         return
         // *
     }
@@ -87,39 +97,7 @@ client.on('message', (message) => {
     try {
         const hasSucceeded = command.execute(message, args, client)
 
-        // * this embed is pasted into a channel in my own server to log command usage
-        const embed = getEmbed()
-            .setTitle(`Command Execute =^0ω0^=`)
-            .addFields({
-                name: 'What?',
-                value: `\`${commandName}\` command`,
-                inline: false,
-            })
-            .addFields({
-                name: 'Where?',
-                value: `In ${(!message.guild) ? message.author.tag + "'s DMs" : message.guild?.name} \n ID: ${message.guild?.id ?? message.author.id}`,
-                inline: false,
-            })
-            .addFields({
-                name: 'Who?',
-                value: `User ${message.author.tag} \n ID: ${message.author.id}`,
-                inline: true,
-            })
-            .addFields({
-                name: 'When?',
-                value: `On <t:${dayjs().unix()}:D>, at <t:${dayjs().unix()}:t>`,
-                inline: false,
-            })
-            .addFields({
-                name: 'Success?',
-                value: `${hasSucceeded ? 'True' : 'False'} \n Args: ${(!args) ? 'None' : `${args}`}`,
-                inline: false
-            })
-
-        client.channels.cache.get('854903507471433728').send(embed)
-        // *
-    
-    // * if there's as error, it does this thing
+        // * if there's as error, it does this thing
     } catch (error) {
         console.error(error)
         message.reply(`uh oh! It seems you've run into an error: \n ${error}`)

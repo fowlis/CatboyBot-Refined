@@ -24,6 +24,6 @@ module.exports = {
             'https://tenor.com/view/get-real-sexy-among-us-gif-19307656',
         ]
 
-        message.channel.send(`${gifs[randomBetween(0, 14)]}`)
+        message.reply({content: `${gifs[randomBetween(0, 14)]}`})
     },
 }

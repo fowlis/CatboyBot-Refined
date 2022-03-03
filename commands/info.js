@@ -20,14 +20,15 @@ const commandToDescription = {
     reload: "**Description:** Reloads a provided command, so the bot doesn't need to be restarted to update a command's code! \n\n **Aliases:** rel \n\n **Usage:** `c-reload <command>` \n\n **Permissions:** Bot Owner Only \n\n **Cooldown:** 5s",
     serotonin:
         '**Description:** Provides you or another user with links to Reddit and Twitter pages to give you serotonin! \n\n **Usage:** `c-serotonin`, `c-serotonin <user>`\n\n **Permissions:** None \n\n **Cooldown:** 5s',
-    userid: '**Description:** Shows you your own, or someone else\'s Discord user ID! \n\n **Aliases:** id, uid \n\n **Usage:** `c-userid`, `c-userid <user>` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
+    userid: "**Description:** Shows you your own, or someone else's Discord user ID! \n\n **Aliases:** id, uid \n\n **Usage:** `c-userid`, `c-userid <user>` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
     update: '**Description:** Provides you with the most recent update to the bot! \n\n **Aliases:** upd \n\n **Usage:** `c-update`\n\n **Permissions:** None \n\n **Cooldown:** 5s',
     uptime: '**Description:** Shows you how long the bot has been running since last restart! \n\n **Usage:** `c-uptime` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
     setstatus:
         '**Description:** Gives the bot a new status (to the args provided), or resets it to nothing (when no args provided)! \n\n **Usage:** `c-setstatus`, `c-setstatus <new status>` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s',
-    createinvite: "**Description:** Creates a one-use invite for the server the command is used in! \n\n **Usage:** `c-createinvite` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s",
-    roll: "**Description:** Roll a number between 1 and a number you provide! \n\n **Usage:** `c-roll <num>` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
-    unix: "**Description:** Shows you the current unix time, and the unix time formatted in many ways! \n\n **Usage:** `c-unix` \n\n **Permissions:** None \n\n **Cooldown:** 5s",
+    createinvite:
+        '**Description:** Creates a one-use invite for the server the command is used in! \n\n **Usage:** `c-createinvite` \n\n **Permissions:** Bot Owner \n\n **Cooldown:** 5s',
+    roll: '**Description:** Roll a number between 1 and a number you provide! \n\n **Usage:** `c-roll <num>` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
+    unix: '**Description:** Shows you the current unix time, and the unix time formatted in many ways! \n\n **Usage:** `c-unix` \n\n **Permissions:** None \n\n **Cooldown:** 5s',
 }
 
 module.exports = {
@@ -39,17 +40,17 @@ module.exports = {
         if (description == null) {
             if (Math.random() < 0.25) {
                 return message.reply(
-                    `that command doesn't have an info page, or isn't a valid command! \n *Hint: use \`c-help\` to see the list of commands!*`
+                    `You didn't give me a command name to lookup! \n Correct syntax: \`c-info <command name>\`, example: \`c-info help\`\n*Hint: use \`c-help\` to see the list of commands!*`
                 )
             } else {
                 return message.reply(
-                    `that command doesn't have an info page, or isn't a valid command!`
+                    `You didn't give me a command name to lookup!\nCorrect syntax: \`c-info <command name>\`, example: \`c-info help\``
                 )
             }
         }
 
         const embed = getEmbed().setTitle(`${args[0]}`).setDescription(description)
 
-        return message.channel.send(embed)
+        return message.channel.send({ embeds: [embed] })
     },
 }

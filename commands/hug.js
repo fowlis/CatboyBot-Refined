@@ -11,6 +11,6 @@ module.exports = {
             .setTitle(`**${message.author.username} hugs ${user?.username ?? 'themself'}!**`)
             .setImage(user ? 'https://i.imgur.com/S4JpvwO.gif' : 'https://i.imgur.com/3pJy4mM.gif', { format: 'gif' })
 
-        message.channel.send(embed)
+        message.channel.send({embeds: [embed]})
     },
 }

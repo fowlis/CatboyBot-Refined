@@ -13,13 +13,13 @@ module.exports = {
         }
 
         if (args == 'dm') {
-            message.author.send(githubMsg)
+            message.author.send({content: {githubMsg}})
             return
         } else if (!message.guild) {
-            message.channel.send(githubMsg)
+            message.channel.send({content: {githubMsg}})
             return
         } else {
-            message.channel.send(githubMsg)
+            message.channel.send({content: {githubMsg}})
             return
         }
     },

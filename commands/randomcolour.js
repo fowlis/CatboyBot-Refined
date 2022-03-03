@@ -26,6 +26,6 @@ module.exports = {
                 `**Hex: #${hexString}**\n\n[Open in browser](https://www.google.com/search?q=%23${hexString})`
             )
 
-        message.channel.send(embed)
+        message.channel.send({embeds: [embed]})
     },
 }

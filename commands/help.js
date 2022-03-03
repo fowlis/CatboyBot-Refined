@@ -36,12 +36,12 @@ module.exports = {
 
         if (args == 'dm') { // * sends embed to dms
             if (!message.guild) {
-                message.author.send(`I'm already in your DMs, silly! Here's the help embed anyway:`, [helpEmbed])
+                message.author.send({content: `I'm already in your DMs, silly! Here's the help embed anyway:`, embeds: [helpEmbed]})
                 // * runs if command and args is used in dms
                 return
             } else
             try { 
-                await message.author.send(`You've got mail! :mailbox_with_mail:`, [helpEmbed])
+                await message.author.send({content: `You've got mail! :mailbox_with_mail:`, embeds: [helpEmbed]})
                 message.channel.send(`Check your DMs, ${message.author}!`);
                 return;
                 // * runs if command and args is used outwith dms
@@ -50,7 +50,7 @@ module.exports = {
             }
             
             return
-        } else message.channel.send(helpEmbed)
+        } else message.reply({embeds: [helpEmbed]})
         // * runs if command is used anywhere else & without args
 
     },
