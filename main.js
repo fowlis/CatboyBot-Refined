@@ -95,7 +95,7 @@ client.on('messageCreate', (message) => {
     } // *
 
     try {
-        const hasSucceeded = command.execute(message, args, client)
+        const hasSucceeded = command.execute(message, args, client) //this var isnt used anywhere, but removing it stops the bot from reading commands for whatever reason
 
         // * if there's as error, it does this thing
     } catch (error) {

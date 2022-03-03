@@ -126,7 +126,7 @@ module.exports = {
                             message.channel.send({embeds:[embedCola]})
                         }
                     })
-                    .catch((collected) => {
+                    .catch((collected) => { // i need this for something... dont remember what but removing it breaks stuff
                         message.reply('you took too long to order :( The window has closed!')
                     })
             })

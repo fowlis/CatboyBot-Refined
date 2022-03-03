@@ -7,10 +7,10 @@ module.exports = {
     cooldown: 5,
     execute(message) {
         const embed = getEmbed()
-            .setTitle('**Update as of** <t:1635706208:R>')
+            .setTitle('**Update as of** <t:1646348482:R>')
             .addFields({
                 name: '**__Changelog:__**',
-                value: '• Added some new cat pictures\n• Reduced the chance of the "Burger Kitty" event appearing\n• Removed Herobrine',
+                value: '• Finally fixed everything after the DJS update',
                 inline: true,
             })
             .addField('__Notes:__', 'As always, you can get more info on a command using `c-info <command name>`!')
