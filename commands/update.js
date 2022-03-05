@@ -15,10 +15,9 @@ module.exports = {
             })
             .addField('__Notes:__', 'As always, you can get more info on a command using `c-info <command name>`!')
 
-        message.channel.send({embeds: [embed]})
+        message.channel.send({ embeds: [embed] })
     },
 }
-
 
 /* SKELETON CODE FOR UPDATING (mostly useless)
 

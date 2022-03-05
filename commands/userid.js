@@ -8,9 +8,11 @@ module.exports = {
     execute(message) {
         const user = message.mentions.users.first()
 
-        const embed = getEmbed()
-            .setTitle(`${user?.username ?? message.author.username}${user ? `'s` : ', your'} user ID is \`${user?.id ?? message.author.id}\``)
-        message.channel.send({embeds: [embed]})
-
+        const embed = getEmbed().setTitle(
+            `${user?.username ?? message.author.username}${user ? `'s` : ', your'} user ID is \`${
+                user?.id ?? message.author.id
+            }\``
+        )
+        message.channel.send({ embeds: [embed] })
     },
 }

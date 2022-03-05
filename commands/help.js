@@ -4,10 +4,12 @@ module.exports = {
     name: 'help',
     description: 'this is a help command!',
     cooldown: 5,
-    execute: async(message ,args) => {
+    execute: async (message, args) => {
         const helpEmbed = getEmbed()
             .setTitle("__Welcome to CatboyBot! slughead's little project.__")
-            .setDescription("Here you will find the bot's commands! \n You can optionally get this message sent to your DMs by using `c-help dm`!")
+            .setDescription(
+                "Here you will find the bot's commands! \n You can optionally get this message sent to your DMs by using `c-help dm`!"
+            )
             .addFields({
                 name: '**__Basic Commands__**',
                 value: '`avatar` \n `help` \n `info` \n `ping` \n `unix` \n `update` \n `uptime` \n `userid`',
@@ -34,24 +36,30 @@ module.exports = {
                 inline: false,
             })
 
-        if (args == 'dm') { // * sends embed to dms
+        if (args == 'dm') {
+            // * sends embed to dms
             if (!message.guild) {
-                message.author.send({content: `I'm already in your DMs, silly! Here's the help embed anyway:`, embeds: [helpEmbed]})
+                message.author.send({
+                    content: `I'm already in your DMs, silly! Here's the help embed anyway:`,
+                    embeds: [helpEmbed],
+                })
                 // * runs if command and args is used in dms
                 return
             } else
-            try { 
-                await message.author.send({content: `You've got mail! :mailbox_with_mail:`, embeds: [helpEmbed]})
-                message.channel.send(`Check your DMs, ${message.author}!`);
-                return;
-                // * runs if command and args is used outwith dms
-            } catch (err) { // * runs if user has dms from serv members disabled
-                message.channel.send(`Looks like I can't send you DMs :( Update your privacy settings to allow DMs from server members so I can DM you! \nOr, run the \`c-help\` command instead`)
-            }
-            
-            return
-        } else message.reply({embeds: [helpEmbed]})
-        // * runs if command is used anywhere else & without args
+                try {
+                    await message.author.send({ content: `You've got mail! :mailbox_with_mail:`, embeds: [helpEmbed] })
+                    message.channel.send(`Check your DMs, ${message.author}!`)
+                    return
+                    // * runs if command and args is used outwith dms
+                } catch (err) {
+                    // * runs if user has dms from serv members disabled
+                    message.channel.send(
+                        `Looks like I can't send you DMs :( Update your privacy settings to allow DMs from server members so I can DM you! \nOr, run the \`c-help\` command instead`
+                    )
+                }
 
+            return
+        } else message.reply({ embeds: [helpEmbed] })
+        // * runs if command is used anywhere else & without args
     },
 }

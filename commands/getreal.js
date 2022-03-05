@@ -1,12 +1,11 @@
 const randomBetween = require('../utils/randomBetween')
-const { Permissions } = require('discord.js');
+const { Permissions } = require('discord.js')
 
 module.exports = {
     name: 'getreal',
     description: 'get real',
     cooldown: 5,
     execute(message) {
-
         const gifs = [
             'https://tenor.com/view/get-real-scott-the-woz-scott-the-woz-get-real-funny-real-gif-23170110',
             'https://tenor.com/view/get-real-gif-23169318',
@@ -25,11 +24,9 @@ module.exports = {
             'https://tenor.com/view/get-real-sexy-among-us-gif-19307656',
         ]
 
-        if(message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) {
+        if (message.guild.me.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) {
             message.delete()
-            message.channel.send({content: `${gifs[randomBetween(0, 14)]}`});
-        } else
-        
-        message.reply({content: `${gifs[randomBetween(0, 14)]}`})
+            message.channel.send({ content: `${gifs[randomBetween(0, 14)]}` })
+        } else message.reply({ content: `${gifs[randomBetween(0, 14)]}` })
     },
 }

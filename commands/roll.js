@@ -13,15 +13,17 @@ module.exports = {
         }
 
         if (num <= 1 || num >= 10000) {
-            message.reply('you need to give me a number higher than 1 and lower than 10000 to roll! Any number between 2 and 9999 is ok!')
+            message.reply(
+                'you need to give me a number higher than 1 and lower than 10000 to roll! Any number between 2 and 9999 is ok!'
+            )
             return
         }
 
         const roll = randomBetween(1, num)
-        const myMessage = await message.channel.send({content: `I roll a...`})
+        const myMessage = await message.channel.send({ content: `I roll a...` })
         setTimeout(() => {
-            if (roll == 69) myMessage.edit({content: `I roll a... ` + roll + '! Nice :wink:'})
-            else myMessage.edit({content: `I roll a... ` + roll + '!'})
+            if (roll == 69) myMessage.edit({ content: `I roll a... ` + roll + '! Nice :wink:' })
+            else myMessage.edit({ content: `I roll a... ` + roll + '!' })
         }, 1500)
     },
 }
