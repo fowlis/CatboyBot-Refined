@@ -7,9 +7,10 @@ module.exports = {
     description: 'this is a cat command!',
     cooldown: 5,
     execute: async (message) => {
-        const imageNumber = randomBetween(1, 59)
+        const imageNumber = randomBetween(1, 66)
 
         const catPicArray = new Array(
+            '',
             'xzxl2n',
             'g4nnho',
             '2vbbwc',
@@ -66,7 +67,17 @@ module.exports = {
             'tawj0n',
             'i5mbix',
             'f6k6d7',
-            '6ph845'
+            '6ph845',
+            '6q5idxnecc',
+            'iizkxdt2qe',
+            't6mbk9d0gh',
+            '66o2e100ev',
+            'ee6o62kbbk',
+            '3cuk1wlzvq',
+            '6txvwktjqo',
+            'mvq414l8lw',
+            'q9s3wyi6d0',
+            'xpokyln83t'
         )
 
         const embed = getEmbed()
@@ -78,7 +89,7 @@ module.exports = {
                 .setColor('B3F1F2')
                 .setDescription('This image has a 0.01% chance of appearing! =0.0=')
                 .setImage('https://slug.feen.us/0oujlr.jpg')
-            message.channel.send({embeds: [embed]})
+            message.channel.send({ embeds: [embed] })
         } else if (Math.random() < 0.01) {
             //happens at a 0.1% chance
             embed
@@ -86,8 +97,9 @@ module.exports = {
                 .setColor('B3F1F2')
                 .setDescription('They have a 0.1% chance of appearing! =0.0=')
                 .setImage('https://i.imgur.com/CS9sszt.gif')
-            message.channel.send({embeds: [embed]})
-        } else if (Math.random() < 0) { //broken until i fix it -- 0.00025 for number 
+            message.channel.send({ embeds: [embed] })
+        } else if (Math.random() < 0) {
+            //broken until i fix it -- 0.00025 for number
             //happens at a 0.0025% chance
             embed
                 .setTitle(`You step into a Burger Kitty!`)
@@ -96,7 +108,7 @@ module.exports = {
                     'What would you like to order? \n 1 for Burger, 2 for Cola! \n (0.0025% chance of appearing! =0.0=)'
                 )
                 .setImage('https://slug.feen.us/d1d5g2.jpg')
-            message.channel.send({embeds: [embed]}).then((sentEmbed) => {
+            message.channel.send({ embeds: [embed] }).then((sentEmbed) => {
                 sentEmbed.react('1️⃣')
                 sentEmbed.react('2️⃣')
 
@@ -115,7 +127,7 @@ module.exports = {
                                 .setColor('B3F1F2')
                                 .setDescription('Thank you for ordering at Burger Kitty!')
                                 .setImage('https://slug.feen.us/bczhc7.png')
-                            message.channel.send({embeds: [embedBurger]})
+                            message.channel.send({ embeds: [embedBurger] })
                         } else if (reaction.emoji.name === '2️⃣') {
                             const embedCola = getEmbed()
                             embedCola
@@ -123,10 +135,11 @@ module.exports = {
                                 .setDescription('Thank you for ordering at Burger Kitty!')
                                 .setColor('B3F1F2')
                                 .setImage('https://slug.feen.us/i1vlbw.jpg')
-                            message.channel.send({embeds:[embedCola]})
+                            message.channel.send({ embeds: [embedCola] })
                         }
                     })
-                    .catch((collected) => { // i need this for something... dont remember what but removing it breaks stuff
+                    .catch((collected) => {
+                        // i need this for something... dont remember what but removing it breaks stuff
                         message.reply('you took too long to order :( The window has closed!')
                     })
             })
@@ -135,7 +148,7 @@ module.exports = {
                 .setTitle('Here is your kitty picture! 🐈')
                 .setDescription(`Img no. ${imageNumber}`)
                 .setImage(`https://slug.feen.us/${catPicArray[imageNumber]}.jpg`)
-            message.channel.send({embeds: [embed]})
+            message.channel.send({ embeds: [embed] })
         }
     },
 }
