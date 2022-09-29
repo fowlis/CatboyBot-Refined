@@ -1,9 +1,13 @@
-const { Client, Collection } = require('discord.js')
+const { Client, Intents, Collection } = require('discord.js')
 const fs = require('fs')
 const { prefix, token, ownerID } = require('./config.json')
+const { REST } = require('@discordjs/rest')
+const { Routes } = require('discord-api-types/v9')
 
 const client = new Client(
-    { intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'] },
+    {
+        intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS', 'DIRECT_MESSAGE_REACTIONS', 'DIRECT_MESSAGES'],
+    },
     { partials: ['MESSAGE', 'CHANNEL', 'REACTION'], disableEveryone: true }
 )
 

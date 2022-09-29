@@ -10,6 +10,6 @@ module.exports = {
     cooldown: 5,
     execute: async (message, args, client) => {
         const uptime = dayjs.utc(client.uptime).format('HH[h], mm[m], ss[s]').replace('00h, ', '').replace('00m, ', '')
-        message.channel.send({ content: `Hi! I started roughly ${dayjs(0).from(client.uptime)} \`(${uptime})\`` })
+        message.channel.send({ content: `Hi! I started ${dayjs(0).from(client.uptime)} \`(${uptime})\`` })
     },
 }
